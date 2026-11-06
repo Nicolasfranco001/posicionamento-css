@@ -22,6 +22,12 @@ body {
    (Desafio: Deixar preso no topo ao rolar a página com position: sticky)
    -------------------------------------------------------------------------- */
 .hud-superior {
+  position: sticky;
+  top: 0;
+  display:inline-block;
+  width: 100%;
+  height: 60px;
+  z-index: 100;
   background-color: #1e293b;
   border-bottom: 2px solid #334155;
   padding: 15px 20px;
@@ -30,6 +36,7 @@ body {
 }
 
 .hud-titulo {
+  position: absolute;
   font-size: 18px;
   margin: 0 0 5px 0;
 }
@@ -37,6 +44,10 @@ body {
 .hud-status-servidor {
   font-size: 12px;
   color: #4ade80;
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  transform: translate(-3, -50%);
 }
 
 /* --------------------------------------------------------------------------
@@ -45,11 +56,13 @@ body {
 .container-arena {
   width: 90%;
   margin: 20px auto;
+  text-align: center;
 }
 
 .titulo-secao {
   font-size: 24px;
   margin: 0 0 8px 0;
+  text-align: center;
 }
 
 .descricao-secao {
@@ -68,6 +81,9 @@ body {
   margin-bottom: 30px;
   padding: 15px;
   width: 320px;
+  position: relative;
+  display:inline-block;
+  margin-right: 20px;
   /* TODO: Adicione position: relative aqui */
 }
 
@@ -109,7 +125,12 @@ body {
    4. BADGES E TAGS
    (Desafio: Desacoplar do fluxo com position: absolute sobre a imagem)
    -------------------------------------------------------------------------- */
-.badge-raridade {
+.badge-raridade-L {
+  position: absolute;
+  top: 15%;
+  left: 72%;
+  z-index: 99;
+  transform: translate(-11%, -72%);
   background-color: #ea580c;
   color: #ffffff;
   font-size: 11px;
@@ -117,13 +138,40 @@ body {
   padding: 4px 8px;
   /* TODO: Aplique position: absolute, top (ex: 26px), right (ex: 26px) e z-index aqui */
 }
-
+.badge-raridade-E {
+  position: absolute;
+  top: 15%;
+  left: 72%;
+  z-index: 99;
+  transform: translate(-11%, -72%);
+  background-color: #eab308;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 8px;
+}
+.badgae-raridade-R {
+  position: absolute;
+  top: 15%;
+  left: 78%;
+  z-index: 99;
+  transform: translate(-11%, -72%);
+  background-color: #8b5cf6;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 8px;
+}
 .tag-status {
   background-color: #16a34a;
   color: #ffffff;
   font-size: 11px;
   font-weight: bold;
   padding: 4px 8px;
+   position: absolute;
+  top: 40%;
+  left: 6%;
+  z-index: 99;
   /* TODO: Aplique position: absolute, top (ex: 122px), left (ex: 26px) e z-index aqui */
 }
 
